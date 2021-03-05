@@ -8,7 +8,7 @@ export default class Connection {
     public constructor(line: Number, direction: String, departure: String) {
       this.line = line;
       this.direction = direction;
-      this.departure = departure;
+      this.departure = departure.replace(' Min', 'm');
     }
 
     /**
