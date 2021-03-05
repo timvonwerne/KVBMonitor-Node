@@ -71,6 +71,7 @@ function processDepartures(departures: Array<Connection>) {
  */
 function display() {
   setDateTime();
+  matrix.clear();
   matrix.drawText(2, 8, date, font, 255, 165, 0); // Draw the date
   matrix.drawText(37, 8, time, font, 255, 165, 0);
 
