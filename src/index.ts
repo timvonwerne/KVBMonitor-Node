@@ -59,7 +59,8 @@ function processDepartures(departures: Array<Connection>) {
   connections = [];
 
   departures.forEach((d: Connection) => {
-    if (d.direction === 'Bockl.' || d.direction === 'Rochu.') {
+    if (d.direction === 'Bocklemünd' || d.direction === 'Rochusplatz') {
+      d.direction = d.direction.substring(0, 5) + ".";
       connections.push(d);
     }
   });
