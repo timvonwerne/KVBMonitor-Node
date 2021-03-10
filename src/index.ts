@@ -19,8 +19,8 @@ const config: {
 const matrix = new LedMatrix(config.matrixRows, config.matrixCols);
 const font = path.join(__dirname, '../fonts/4x6.bdf');
 
-let date: String;
-let time: String;
+let date: string;
+let time: string;
 let connections: Array<Connection>;
 
 /**

@@ -1,11 +1,11 @@
 export default class Connection {
-    line: Number;
+    line: number;
 
-    direction: String;
+    direction: string;
 
-    departure: String;
+    departure: string;
 
-    public constructor(line: Number, direction: String, departure: String) {
+    public constructor(line: number, direction: string, departure: string) {
       this.line = line;
       this.direction = direction;
       this.departure = departure.includes('Min') ? departure.replace(' Min', 'm') : departure.replace('Sofort', '0m');
