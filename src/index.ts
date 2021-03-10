@@ -17,7 +17,7 @@ const config: {
 };
 
 const matrix = new LedMatrix(config.matrixRows, config.matrixCols);
-const font = path.join(__dirname, '../fonts/4x6.bdf');
+const font = path.join(__dirname, '../fonts/5x7.bdf');
 
 let date: string;
 let time: string;
@@ -72,12 +72,12 @@ function processDepartures(departures: Array<Connection>) {
 function display() {
   setDateTime();
   matrix.clear();
-  matrix.drawText(2, 2, date, font, 255, 165, 0); // Draw the date
-  matrix.drawText(43, 2, time, font, 255, 165, 0);
+  matrix.drawText(2, 8, date, font, 255, 165, 0); // Draw the date
+  matrix.drawText(37, 8, time, font, 255, 165, 0);
 
   getDepartures().then((res: any) => {
     processDepartures(res);
-    let yMargin = 13;
+    let yMargin = 19;
 
     if (connections) {
       connections.forEach(((conn: Connection) => {
