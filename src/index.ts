@@ -60,7 +60,7 @@ function processDepartures(departures: Array<Connection>) {
 
   departures.forEach((d: Connection) => {
     if (d.direction === 'Bocklemünd' || d.direction === 'Rochusplatz') {
-      d.direction = d.direction.substring(0, 5) + ".";
+      d.direction = `${d.direction.substring(0, 5)}.`;
       connections.push(d);
     }
   });
