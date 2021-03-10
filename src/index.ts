@@ -80,6 +80,7 @@ function display() {
     let yMargin = 19;
 
     if (connections) {
+      connections = connections.slice(0, 2); // Slice the array to 2 objects for spacing
       connections.forEach(((conn: Connection) => {
         matrix.drawText(2, yMargin, conn.toString(), font, 255, 165, 0);
         console.log(`Drawing ${conn} with yMargin of ${yMargin}`);
